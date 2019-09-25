@@ -1,0 +1,75 @@
+<html >
+<head>
+    <title>Grade Calculator </title>
+	
+    <link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript">
+        function gradecalc()
+        {
+            //Obtain user inputs
+            var midtermweight= Number(document.getElementById("midtermweight").value);
+            var midtermgrade= Number(document.getElementById("midtermgrade").value);
+            var homeworkweight= Number(document.getElementById("homeworkweight").value);
+            var homeworkgrade= Number(document.getElementById("homeworkgrade").value);
+			var quizweight= Number(document.getElementById("quizweight").value);
+            var quizgrade= Number(document.getElementById("quizgrade").value);
+			var participationweight= Number(document.getElementById("participationweight").value);
+            var participationgrade= Number(document.getElementById("participationgrade").value);
+			var ecweight= Number(document.getElementById("ecweight").value);
+            var ecgrade= Number(document.getElementById("ecgrade").value);
+			var finalweight= Number(document.getElementById("finalweight").value);
+            var finalgrade= Number(document.getElementById("finalgrade").value);
+			var midtermraw = midtermgrade * (midtermweight/100);
+			var homeworkraw = homeworkgrade * (homeworkweight/100); 
+			var quizraw = quizgrade * (quizweight/100); 
+			var participationraw = participationgrade * (participationweight/100)
+			var totalpercent = midtermweight + homeworkweight + quizweight + participationweight + finalweight; 
+			
+			if (totalpercent!=100) {
+			alert("Your weight percentages need to add to 100%!") 
+			}
+			else 
+            //Perform calculation
+            var gradeneeded = (finalgrade - ecgrade - participationraw - quizraw - homeworkraw - midtermraw)/(finalweight/100);
+
+            //Display result of calculation
+            document.getElementById("output").innerText=gradeneeded;
+
+        }
+</script>
+
+</head>
+<body style = "margin:0">
+     <div class = "grid" id = "container"> 
+    <h1 id = header>Calculate What You Need on the Final!</h1>
+    <h2 id = "category">Category</h2>
+    <h2 id = "weightpercent">Weight Percentage</h2>
+    <h2 id = "score">Score</h2> 
+    <h3 id = "midterms">Midterms:</h3>
+        <input type = "text" id="midtermweight"/>
+        <input type = "text" id="midtermgrade"/>
+    <h3 id = "homework" >Homework:</h3>
+        <input type = "text" id="homeworkweight"/>
+        <input type = "text" id="homeworkgrade"/>
+	<h3 id = "quiz">Quiz:</h3>
+        <input type = "text" id="quizweight"/>
+        <input type = "text" id="quizgrade"/>
+	<h3 id = "participation">Class Participation: </h3>
+        <input type = "text" id="participationweight"/>
+        <input type = "text" id="participationgrade"/>
+	<h3 id = "ec">Extra Credit: </h3>
+        <input type = "text" id="ecweight"/>
+        <input type = "text" id="ecgrade"/>
+	<h3 id = "finals">Finals:</h3>
+        <input type = "text" id="finalweight"/> 
+	<h3 id = "gradewant">Grade I Want: </h3>
+        <input type = "text" id="finalgrade"/>
+    
+  <input type="submit" id = "submitbutton" value="Calculate!" onclick="gradecalc();">
+
+<div id = "message">
+    <h2 >You need a <span id="output">_</span> on the final to get your desired grade.</h2>
+</div>
+    </div>
+</body>
+

@@ -1,0 +1,180 @@
+
+
+#container {
+	justify-content: center; 
+	text-align: center; 
+	display: grid; 
+	grid-column-gap: 15px; 
+	grid-template-columns: 200px 150px 150px;
+	align-self: center;
+	grid-template-areas: 
+	"header header header"
+	"category weightpercent score"
+	"m1 m2 m3"
+	"h1 h2 h3"
+	"q1 q2 q3"
+	"p1 p2 p3"
+	"e1 e2 e3"
+	"finals finalweight ."
+	"gradewant . finalgrade"
+	". submit ."
+	"message message message"
+
+}
+
+#header {
+	grid-area: header; 
+	text-align: center;
+	font-family: 'Black Han Sans', sans-serif;
+	align-self: center
+}
+
+#category {
+	grid-area: category; 
+	text-align: center; 
+}
+
+#weightpercent {
+	grid-area: weightpercent;
+	text-align: center; 
+}
+
+#score {
+	grid-area: score;
+	text-align: center; 
+}
+
+#midterms {
+	grid-area: m1;
+}
+
+#midtermweight { 
+	grid-area: m2;
+	width: 150px;
+	height: 30px; 
+	align-self: center
+}
+
+#midtermgrade { 
+	grid-area: m3;
+	width: 150px;
+	height: 30px;
+	align-self: center
+ }
+
+#homework {
+	grid-area: h1
+}
+
+#homeworkweight {
+	grid-area: h2;
+	width: 150px;
+	height: 30px;
+	align-self: center
+}
+
+#homeworkgrade { 
+	grid-area: h3;
+	width: 150px;
+	height: 30px;
+	align-self: center
+}
+
+#quiz {
+	grid-area: q1; 
+}
+
+#quizweight {
+	grid-area: q2;
+	width: 150px;
+	height: 30px;
+	align-self: center
+}
+
+#quizgrade { 
+	grid-area: q3;
+	width: 150px;
+	height: 30px;
+	align-self: center
+}
+
+#participation {
+	grid-area: p1; 
+}
+
+#participationweight {
+	grid-area: p2;
+	width: 150px;
+	height: 30px;
+	align-self: center
+}
+
+#participationgrade {
+	grid-area: p3;
+	width: 150px;
+	height: 30px;
+	align-self: center
+}
+
+#ec { 
+	grid-area: e1; 
+ }
+
+#ecweight {
+	grid-area: e2;
+	width: 150px;
+	height: 30px;
+	align-self: center
+}
+
+#ecgrade { 
+	grid-area: e3;
+	width: 150px;
+	height: 30px;  
+	align-self: center
+}
+
+#finals { 
+	grid-area: finals; 
+ }
+
+#finalweight {
+	grid-area: finalweight;
+	width: 150px;
+	height: 30px;
+	align-self: center
+}
+
+#gradewant {
+	grid-area: gradewant; 
+}
+
+#finalgrade {
+	grid-area: finalgrade; 
+	width: 150px;
+	height: 30px;
+	align-self: center;
+}
+
+#submitbutton {
+	grid-area: submit; 
+	text-align: center; 
+	justify-content: center; 
+}
+
+#message { 
+	grid-area: message;
+	justify-content: center;
+	display: inline; 
+ }
+*{ border: 1px solid #43cea2, #185a9d; }
+
+.{
+	margin: 0px;
+	padding: 0px;
+}
+
+ #container { 
+ 	background: linear-gradient(to right, #43cea2, #185a9d)
+  }
+
