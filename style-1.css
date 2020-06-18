@@ -174,7 +174,7 @@
 	padding: 0px;
 }
 
- #container { 
- 	background: linear-gradient(to right, #43cea2, #185a9d)
+ body { 
+ 	background-color: linear-gradient(to right, #43cea2, #185a9d)
   }
 
